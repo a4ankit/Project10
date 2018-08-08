@@ -6,5 +6,8 @@ jobs:
     steps:
        - run:
          name: Deploy
-         command: |
-		ant  -lib build/lib/ deploy:
+       - run:
+    	shell: /bin/sh
+    	command: |
+      		ant -lib lib/ Build: 
+      		
