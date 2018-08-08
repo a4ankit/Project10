@@ -3,9 +3,4 @@ jobs:
   build:
     docker:
       - image: circleci/java:8-jdk
-    steps:
-	  - checkout
-      - run:
-         name: Deploy
-         command: |
-           ant -lib lib/ Build:
+   
