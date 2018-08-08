@@ -23,7 +23,11 @@ jobs:
           command: |
             java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
-test override:
-    post:
-      - ant -lib lib/ Build: 
-          timeout: 600
+   environment:
+	CIRCLE_ENV: test
+	Production: production
+test:
+  override:
+  post:
+	- ant -lib lib/ Build: 
+        	timeout: 600
