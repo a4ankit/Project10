@@ -2,17 +2,6 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/java:8-jdk
-    steps:
-      - checkout
-      - run:
-         name: Deploy
-         command: |
-		- ant -lib lib/ Build:
-version: 2
-jobs:
-  build:
-    docker:
       - image: circleci/python:3.6.2-stretch-browsers
         environment:
           FLASK_CONFIG: testing
