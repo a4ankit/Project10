@@ -6,5 +6,5 @@ jobs:
   steps:
       - checkout
       - run:
-         name: Deploy
+         name: build
          command: ant -f builds/build.xml -lib build/lib/ deploy:
