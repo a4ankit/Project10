@@ -3,8 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
-  steps:
+    steps:
       - checkout
       - run:
          name: build
-         command: ant -f builds/build.xml -lib build/lib/ deploy:
+         command: |
+		- ant -lib lib/ Build:
