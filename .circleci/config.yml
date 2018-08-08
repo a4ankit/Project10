@@ -2,12 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image: atsnngs/force-com:latest
+      - image: circleci/java:8-jdk
     steps:
-       - run:
+      - run:
          name: Deploy
-       - run:
-    	shell: /bin/sh
-    	command: |
-      		ant -lib lib/ Build: 
-      		
+         command: |
+		 ant -lib lib/ Build:
