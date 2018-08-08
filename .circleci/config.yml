@@ -2,12 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/java:8-jdk
+      - image: atsnngs/force-com:latest
     steps:
-      - checkout
-      - run:
-         name: Build
+       - run:
+         name: Deploy
          command: |
-           -ant -lib lib/ Build: 
-          timeout: 600
-
+		ant  -lib build/lib/ deploy:
